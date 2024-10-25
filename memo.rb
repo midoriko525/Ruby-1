@@ -10,7 +10,7 @@ if memo_type == 1
     file_name= gets.chomp + ".csv"
 
     puts "メモを入力してください（終了時はEnter→ctrl+D）"
-CSV.open(file_name,"w") do |csv|
+    CSV.open(file_name,"w") do |csv|
     while (memo = gets)
     csv << [memo.chomp]
     end
@@ -25,7 +25,7 @@ elsif memo_type == 2
 
     puts"メモを編集してください（終了時はEnter→ctrl+D）"
     CSV.open(file_name,"a") do |csv|
-        while (memo=gets)
+        while (memo = gets)
             csv << [memo.chomp]
         end
     end
