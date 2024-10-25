@@ -11,9 +11,9 @@ if memo_type == 1
 
     puts "メモを入力してください（終了時はEnter→ctrl+D）"
     CSV.open(file_name,"w") do |csv|
-    while (memo = gets)
-    csv << [memo.chomp]
-    end
+        while (memo = gets)
+            csv << [memo.chomp]
+        end
 end
 
 puts "メモが保存されました（ファイル名は#{file_name}）"
@@ -28,7 +28,7 @@ elsif memo_type == 2
         while (memo = gets)
             csv << [memo.chomp]
         end
-    end
+end
     puts "メモが保存されました（ファイル名は#{file_name}）"
 
 else 
